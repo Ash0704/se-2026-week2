@@ -14,4 +14,11 @@ public class Node {
     public void addChild(Node child) {
         this.children.add(child);
     }
+
+    public void dfs() {
+        System.out.println(this.label);
+        for (Node child : this.children) {
+            child.dfs();
+        }
+    }
 }
