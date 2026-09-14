@@ -20,6 +20,16 @@ public class Node {
     public boolean hasChild() {
         return !this.children.isEmpty();
     }
+
+    public int height() {
+        int maxChildHeight = -1;
+
+        for (Node child : this.children) {
+            maxChildHeight = Math.max(maxChildHeight, child.height());
+        }
+
+        return maxChildHeight + 1;
+    }
       
     public void dfs() {
         System.out.println(this.label);
