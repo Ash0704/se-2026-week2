@@ -17,6 +17,10 @@ public class Node {
         this.children.add(child);
     }
 
+    public boolean hasChild() {
+        return !this.children.isEmpty();
+    }
+      
     public void dfs() {
         System.out.println(this.label);
         for (Node child : this.children) {
@@ -37,4 +41,5 @@ public class Node {
         }
     }
 }
+
 
